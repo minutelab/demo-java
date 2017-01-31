@@ -1,20 +1,16 @@
 package com.mycompany.people_db;
 
 import io.minutelab.mlab.MlabRule;
-
-import static junit.framework.Assert.assertEquals;
-import static junit.framework.Assert.fail;
-
 import io.minutelab.mlab.PostGresLab;
 import io.minutelab.mlab.ResourcePrepare;
 import org.junit.Rule;
 import org.junit.Test;
 
+import java.net.URL;
 import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.List;
+
+import static org.junit.Assert.assertEquals;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -29,11 +25,12 @@ import java.util.List;
 public class TestDB {
 
     @Rule
-    public MlabRule test = new MlabRule(new PostGresLab(ResourcePrepare.filename(User.class,"/test.sql")));
+    public MlabRule test = new MlabRule(new PostGresLab(ResourcePrepare.filename(User.class,"/users.sql")));
 
 
     @Test
     public void testFetchUsers()throws Exception{
+       URL x = User.class.getResource("/users.sql");
         Connection con = ((PostGresLab)test.lab).getConnection();
         User.setDBConnection(con);
         ArrayList<User> bobs = User.fetchUsersByFirstName("Bob");
