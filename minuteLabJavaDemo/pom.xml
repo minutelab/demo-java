@@ -6,11 +6,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.mycompany</groupId>
-    <artifactId>mavenproject1</artifactId>
+    <artifactId>javaMinuteLabDemo</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
  
-    <name>mavenproject1</name>
+    <name>javaMinuteLabDemo</name>
     <url>http://www.myorganization.org</url>
     
     <properties>
