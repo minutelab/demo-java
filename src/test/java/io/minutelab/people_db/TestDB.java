@@ -1,4 +1,4 @@
-package com.mycompany.people_db;
+package  io.minutelab.people_db;;
 
 import io.minutelab.mlab.MlabRule;
 import io.minutelab.mlab.PostGresLab;

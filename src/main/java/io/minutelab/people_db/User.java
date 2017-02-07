@@ -1,4 +1,4 @@
-package com.mycompany.people_db;
+package io.minutelab.people_db;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
